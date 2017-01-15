@@ -3,7 +3,7 @@
  */
 public class ContainsMostwater {
     public static void main(String[] args) {
-        int [] heights = {6, 2, 5, 4, 5, 1, 6};
+        int [] heights = {6, 2, 5, 4, 5, 1};
         System.out.println(maxArea(heights));
     }
 
