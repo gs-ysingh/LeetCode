@@ -19,8 +19,8 @@ public class LongestSubsequence {
 
         for (int i = 1; i < size; i++) {
             for (int j = 0; j < i; j++) {
-                if(arr.get(j) < arr.get(i) && L.get(i) < L.get(j) + 1) {
-                    L.set(i, L.get(j) + 1);
+                if(arr.get(j) < arr.get(i)) {
+                    L.set(i, Math.max(L.get(j) + 1, L.get(i)) );
                 }
             }
         }
