@@ -4,6 +4,14 @@ import java.util.Arrays;
 /**
  * Created by YSingh on 20/01/17.
  */
+
+
+//If last characters of both sequences match (or X[m-1] == Y[n-1]) then
+//        L(X[0..m-1], Y[0..n-1]) = 1 + L(X[0..m-2], Y[0..n-2])
+//
+//        If last characters of both sequences do not match (or X[m-1] != Y[n-1]) then
+//        L(X[0..m-1], Y[0..n-1]) = MAX ( L(X[0..m-2], Y[0..n-1]), L(X[0..m-1], Y[0..n-2])
+
 public class LongestSubsequence {
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<Integer>(Arrays.asList(10, 22, 9, 33, 21, 50, 41, 60));
