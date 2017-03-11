@@ -33,11 +33,9 @@ public class LongestSubsequence {
             }
         }
         Integer max = 0;
-
         for (int i = 0; i < size; i++) {
             max = Math.max(max, L.get(i));
         }
-
         return max;
 
     }
