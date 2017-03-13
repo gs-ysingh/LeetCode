@@ -8,7 +8,7 @@ import java.util.Collections;
 public class MinCoinSum {
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<Integer>(Arrays.asList(3, 5, 11));
-        int S = 11;
+        int S = 8;
         System.out.println(minCoinSum(arr, S));
     }
 
