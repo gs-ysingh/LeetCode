@@ -12,7 +12,6 @@ public class QuickSort {
             System.out.print(arr[i] + " ");
         }
     }
-
     private static int [] quickSort(int[] arr, int low, int high) {
         if(low < high) {
             int partition = quick(arr, low, high);
@@ -21,7 +20,6 @@ public class QuickSort {
         }
         return arr;
     }
-
     private static int quick(int[] arr, int low, int high) {
         int i = low - 1;
         int pivot = arr[high]; // Pivot can change to low, high or it can be random
