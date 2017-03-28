@@ -2,9 +2,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-/**
- * Created by YSingh on 20/01/17.
- */
 public class MinCoinSum {
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<Integer>(Arrays.asList(3, 5, 11));
