@@ -15,15 +15,13 @@ public class MinCoinSum {
         M[0] = 0;
 
         for (int s = 1; s <= S; s++) {
-            int flag = 1;
             for (int j = 0; j < arr.size(); j++) {
                 if(arr.get(j) <= s) {
                     M[s] = Math.min(M[s - arr.get(j)] + 1, M[s]);
-                    flag =0;
                 }
 
             }
-            if(flag == 1) {
+            if(M[s] == Integer.MAX_VALUE) {
                 M[s] = 0;
             }
         }
