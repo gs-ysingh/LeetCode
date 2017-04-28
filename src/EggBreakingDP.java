@@ -1,7 +1,7 @@
 /**
  * Created by YSingh on 27/04/17.
  */
-public class EggBreakingB {
+public class EggBreakingDP {
     public static void main(String[] args) {
         int n = 2;
         int k = 100;
@@ -16,9 +16,7 @@ public class EggBreakingB {
         for (int i = 1; i <= n; i++) {
             count[i][1] = 1;
         }
-
         int min;
-
         for (int i = 2; i <= n; i++) {
             for (int j = 2; j <= k; j++) {
                 min =  Integer.MAX_VALUE;
@@ -28,7 +26,6 @@ public class EggBreakingB {
                 count[i][j] = 1 + min;
             }
         }
-
         return count[n][k];
     }
 }
