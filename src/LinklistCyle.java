@@ -6,17 +6,29 @@ public class LinklistCyle {
         LinkedList head = new LinkedList();
         System.out.println(isCycle(head));
         System.out.println(getMiddle(head));
+        System.out.println(reverseList(head));
+    }
+
+    private static LinkedList reverseList(LinkedList head) {
+        LinkedList prevNode = null;
+        LinkedList nextNode = null;
+
+        while (head != null) {
+            nextNode = head.next;
+            head.next = prevNode;
+            prevNode = head;
+            head = nextNode;
+        }
+
+        return prevNode;
     }
 
     private static LinkedList getMiddle(LinkedList head) {
         LinkedList fastPtr = head;
         LinkedList slowPtr = head;
 
-        while (slowPtr != null && fastPtr != null && fastPtr.next != null) {
+        while (fastPtr != null && fastPtr.next != null) {
             fastPtr = fastPtr.next.next;
-            if(fastPtr == null) {
-                break;
-            }
             slowPtr = slowPtr.next;
         }
 
