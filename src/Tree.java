@@ -18,7 +18,6 @@ public class Tree {
 
     private static void printRootToLeaf(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
-        //printRootToLeaf(root, stack);
     }
 
 
