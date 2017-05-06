@@ -20,8 +20,6 @@ public class Tree {
         Stack<TreeNode> stack = new Stack<>();
     }
 
-
-
     private static TreeNode lca(TreeNode root, int a, int b) {
         if(root == null) {
             return null;

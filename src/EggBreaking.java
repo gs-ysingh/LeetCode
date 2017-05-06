@@ -1,7 +1,7 @@
 /**
  * Created by YSingh on 26/04/17.
  */
-public class EggBreakingA {
+public class EggBreaking {
     //This is the solution when floors are divided into k groups
     public static void main(String[] args) {
         int size = 100;
