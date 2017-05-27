@@ -16,7 +16,34 @@ public class AddOneNumber {
         for (int i = 0; i < result.size(); i++) {
             System.out.println(result.get(i));
         }
+
+        //System.out.println(getCountString("AAABBBCCC"));
+        System.out.println(totalPossible("2112"));
+        System.out.println(totalPossible("2101"));
     }
+
+    private static long totalPossible(String input) {
+        int len = input.length();
+        int [] M = new int[len + 1];
+        M[0] = 1;
+        M[1] = 1;
+
+        for (int i = 2; i <= len; i++) {
+            M[i] = 0;
+            if(Character.getNumericValue(input.charAt(i - 1)) > 0) {
+                M[i] = M[i - 1];
+            }
+
+            if(Character.getNumericValue(input.charAt(i - 2)) == 1 ||
+                    (Character.getNumericValue(input.charAt(i - 2)) == 2
+                            && Character.getNumericValue(input.charAt(i - 1)) < 7)) {
+                M[i] += M[i - 2];
+            }
+        }
+        return M[len];
+    }
+
+
 
     private static ArrayList<Integer> addOne(ArrayList<Integer> arr) {
         int carry = 0;
