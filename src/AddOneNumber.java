@@ -17,7 +17,7 @@ public class AddOneNumber {
             System.out.println(result.get(i));
         }
 
-        //System.out.println(getCountString("AAABBBCCC"));
+        System.out.println(getCountString("AAABBBCCC"));
         System.out.println(totalPossible("2112"));
         System.out.println(totalPossible("2101"));
     }
@@ -43,6 +43,30 @@ public class AddOneNumber {
         return M[len];
     }
 
+
+    private static String getCountString(String input) {
+        int len = input.length();
+        if(len == 0) {
+            return "";
+        }
+        int count = 1;
+        char c = input.charAt(0);
+        char current;
+        StringBuilder sb = new StringBuilder();
+        for(int i = 1; i < len; i++) {
+            current = input.charAt(i);
+            if(current == c) {
+                count++;
+            }
+            else {
+                sb.append("" + count).append(c);
+                c = current;
+                count = 1;
+            }
+        }
+        sb.append("" + count).append(c);
+        return sb.toString();
+    }
 
 
     private static ArrayList<Integer> addOne(ArrayList<Integer> arr) {
