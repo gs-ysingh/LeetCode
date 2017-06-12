@@ -11,8 +11,10 @@ public class Boggle {
                                     {'U','E','K'},
                                     {'Q','S','E'}
                            };
-        //findWords(boggle, dictionary, row, col);
-        findWordsTrie(boggle, dictionary, row, col);
+        findWords(boggle, dictionary, row, col);
+
+        //Need to look into this code -:
+        //findWordsTrie(boggle, dictionary, row, col);
     }
     private static void findWordsTrie(char[][] boggle, String[] dictionary, int row, int col) {
 
